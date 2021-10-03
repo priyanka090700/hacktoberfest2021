@@ -27,5 +27,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    nums = [-1,0,1,2,-1,-4]
+    nums = list(map(int,input().split()) #take input from user
     print(s.threeSum(nums))
