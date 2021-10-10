@@ -1,0 +1,23 @@
+
+import smtplib;smtplib.SMTP_SSL().connect(host='smtp.gmail.com', port=587)
+
+import os
+import math
+import random
+import smtplib
+
+gmailaddress = "bhavyaseth.23@gmail.com" #my email id , you need to set yours here*
+gmailpassword = "wiigkui*****" #needs to be generated from google , DONT put your Original password
+
+mailto = "xyz@emaple.com" #whom you wanto send
+
+msg = input("What is your message? \n ")
+mailServer = smtplib.SMTP('smtp.gmail.com' , 587)
+
+mailServer.starttls()
+mailServer.login(gmailaddress , gmailpassword)
+
+mailServer.sendmail(gmailaddress, mailto , msg)
+print(" \n Sent!")
+
+mailServer.quit()
